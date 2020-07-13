@@ -20,6 +20,7 @@ const dbConfig = require("./config/db.config");
 const db = require("./models");
 const Role = db.role;
 
+//connect to mongodb
 db.mongoose
   .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
     useNewUrlParser: true,
@@ -66,6 +67,11 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to fullstack application." });
 });
 
+// routes
+const authRoutes = require("./routes/auth.routes");
+const userRoutes = require("./routes/user.routes");
+authRoutes(app);
+userRoutes(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
