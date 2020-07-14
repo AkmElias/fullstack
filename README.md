@@ -1,4 +1,4 @@
-# fullstack
+# fullstack -  A meant stack app with basic auth flow service. With user signup and login apis. The apis are  jwt token based. 
 
 # few server side screen shots of REST API with JWT token flow
 
@@ -13,3 +13,17 @@
 
 # content only for admin user
 ![](images/api-admin.PNG)
+
+# few client side screen shots of REST API with JWT token flow
+
+# register ui
+ ![](images/signup.PNG)
+ 
+# profile with roles
+![](images/profile.PNG)
+
+# public content no authentication needed 
+![](images/public.PNG)
+
+# admin only content
+![](images/admin.PNG)
