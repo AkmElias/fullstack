@@ -4,11 +4,7 @@ const cors = require("cors");
 
 const app = express();
 
-var corsOptions = {
-  origin: "http://localhost:8081",
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
@@ -35,7 +31,7 @@ db.mongoose
     process.exit();
   });
 
-//function to create 2 important rows in roles collection.
+//function to create 2 important rows in roles collection when connects to mongodb for the firs time.
 function initial() {
   Role.estimatedDocumentCount((err, count) => {
     if (!err && count === 0) {
@@ -72,6 +68,7 @@ const authRoutes = require("./routes/auth.routes");
 const userRoutes = require("./routes/user.routes");
 authRoutes(app);
 userRoutes(app);
+
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
