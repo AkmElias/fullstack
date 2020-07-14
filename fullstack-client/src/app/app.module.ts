@@ -8,8 +8,10 @@ import { AppComponent } from "./app.component";
 import { LoginComponent } from "./components/login/login.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { HomeComponent } from "./components/home/home.component";
+import { AdminComponent } from "./components/admin/admin.component";
+import { ProfileComponent } from "./components/profile/profile.component";
 
-import { authInterceptorProviders } from "./_helpers/auth.intercepter";
+import { authInterceptorProviders } from "./_helpers/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { authInterceptorProviders } from "./_helpers/auth.intercepter";
     LoginComponent,
     RegisterComponent,
     HomeComponent,
+    AdminComponent,
+    ProfileComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [authInterceptorProviders],

@@ -14,11 +14,11 @@ export class UserService {
     return this.http.get(API_URL + "all", { responseType: "text" });
   }
 
-  getUserBoard(): Observable<any> {
+  getUser(): Observable<any> {
     return this.http.get(API_URL + "user", { responseType: "text" });
   }
 
-  getAdminBoard(): Observable<any> {
+  getAdmin(): Observable<any> {
     return this.http.get(API_URL + "admin", { responseType: "text" });
   }
 }
