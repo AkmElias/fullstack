@@ -11,6 +11,10 @@ verifyToken = (req, res, next) => {
   if (!token) {
     return res.status(403).send({ message: "No token provided!" });
   }
+  //token spliting to get the main tokenp part
+  token = token.split(" ");
+  token = token[1];
+  //console.log(`token ${token}`);
 
   jwt.verify(token, config.secret, (err, decoded) => {
     if (err) {
