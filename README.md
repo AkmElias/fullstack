@@ -1,8 +1,7 @@
 # fullstack -  A meant stack app with basic auth flow service. With user signup and login apis. The apis are  jwt token based. 
 
-# there are seperate README file for both fullstack_api and fullstack-client apps given.
-
-# few server side screen shots of REST API with JWT token flow
+ There are seperate README file for both fullstack_api and fullstack-client apps given.
+ Few server side screen shots of REST API with JWT token flow
 
 # signin api 
 ![](images/api-signin.PNG)
