@@ -9,3 +9,6 @@ npm start
 
 # run unit testing
 npm test
+
+# further help
+to get extra info visit https://nodejs.org/en/docs/
